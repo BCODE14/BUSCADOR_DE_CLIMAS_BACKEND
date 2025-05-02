@@ -20,7 +20,9 @@ const apikey=process.env.WEATHER_API_KEY; //variable de almacenamiento de la api
 inithistoryfile(); //comprobando que el archivo de almacenamiento exista
 
 const app = express(); //crea una instancia de la aplicacion express - dame una instancia de tu servidor
-const PORT = process.env.PORT; //definir el puerto donde va a corre el backend
+//const PORT = process.env.PORT; //definir el puerto donde va a corre el backend
+
+const PORT = process.env.PORT || 3000;
 
 app.use(cors()); //esto permite que el navegador no bloque peticiones del frontend que corre en otro server
 app.use(express.json());//vas a recibir peticiones en formato json debes de parsearlas automaticamente
